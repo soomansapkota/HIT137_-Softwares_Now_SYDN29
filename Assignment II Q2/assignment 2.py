@@ -1,20 +1,3 @@
-"""
-Australian Temperature Analysis (Recursive Version with Comments)
------------------------------------------------------------------
-This program processes ALL .csv files under the "temperatures" folder.
-Each CSV represents yearly data from multiple weather stations.
-
-Functions:
-  1. Seasonal averages across ALL stations & years
-  2. Station(s) with the largest temperature range
-  3. Most stable & most variable stations (by standard deviation)
-
-Outputs (saved in text files):
-  - average_temp.txt
-  - largest_temp_range_station.txt
-  - temperature_stability_stations.txt
-"""
-
 import os
 import pandas as pd
 import numpy as np
