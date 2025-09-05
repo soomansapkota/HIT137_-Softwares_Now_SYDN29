@@ -44,7 +44,7 @@ def main():
     t = turtle.Turtle()
     t.speed(0)  # Fastest
 
-    # Move turtle so drawing starts closer to center
+    # Move turtle so drawing starts closer to  center
     t.penup()
     t.goto(-length/2, length/3)
     t.pendown()
