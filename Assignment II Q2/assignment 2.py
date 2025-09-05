@@ -73,4 +73,47 @@ def find_csv_files(folder: str) -> list:
         print(f"Error accessing {folder}: {e}")
     return files
 
+#TODO(for sulav)
+pass 
 
+
+# Main Function
+def main():
+    """Main driver function to run the analysis."""
+    print(f"Looking in: {DATA_DIR}")
+    if not os.path.isdir(DATA_DIR):
+        print(f"Folder not found: {DATA_DIR}")
+        return
+
+    # Find all CSV files
+    files = find_csv_files(DATA_DIR)
+    if not files:
+        print("No CSV files found.")
+        return
+    print(f"Found {len(files)} CSV files")
+
+    # Read CSVs into DataFrames
+    dfs = read_csv_list(files)
+    if not dfs:
+        print("No valid data loaded.")
+        return
+
+    # Merge into one DataFrame
+    print("Merging all CSVs...")
+    df = merge_dataframes(dfs)
+    print(f"Total rows: {len(df)}")
+
+    # Convert to long format
+    long_df = to_long_format(df)
+    print(f"Long format rows: {len(long_df)}")
+
+    # Perform calculations
+    calculate_seasonal_average(long_df)
+    calculate_temperature_range(long_df)
+    calculate_stability(long_df)
+
+    print("Analysis complete!")
+
+
+if __name__ == "__main__":
+    main()
