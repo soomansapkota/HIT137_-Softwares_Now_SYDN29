@@ -1,6 +1,11 @@
-# Assignment 2
+# Assignment 2 Q1
+#Group Name : SYDN 29
 
-# Simple file encryptor/decryptor with custom shifting rules.
+#Group Members :
+# 1. Suman Sapkota - S396224
+# 2. Bibek Pandit - S395718
+# 3. Asha Devi - S394864
+# 4. Sulav Subedi - S396117
 
 # Rules:
 # - Lowercase:
