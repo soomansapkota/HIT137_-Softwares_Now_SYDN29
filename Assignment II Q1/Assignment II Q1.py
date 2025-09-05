@@ -1,4 +1,4 @@
-# assignment2.py
+# Assignment 2
 
 # Simple file encryptor/decryptor with custom shifting rules.
 
